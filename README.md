@@ -27,7 +27,7 @@ The files available for download from the github repo are:
 3. Screenshots of the plots of accuracy and loss of the ANN and CNN models. ANN was tried for a maximum of 2 layers (i.e. 1, 2 layers) and CNN was tried for a maximum of 3 layers
 4. Screenshot of the final training accuracy
 5. model.yaml file for the structure of the model
-6. model_weights.h5 file for the optimised weights
+6. model_weights.h5 file for the optimised weights (sent by WeTransfer)
 
 ## Usage
 
