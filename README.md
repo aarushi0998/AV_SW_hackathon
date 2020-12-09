@@ -23,8 +23,11 @@ The CNN model giving me the most accuracy was finally used and trained again, fr
 
 The files available for download from the github repo are:
 1. The .ipynb code file used for execution of all the above
-2. The finally selected model .h5 file
+2. The finally selected model .h5 file (sent by WeTransfer)
 3. Screenshots of the plots of accuracy and loss of the ANN and CNN models. ANN was tried for a maximum of 2 layers (i.e. 1, 2 layers) and CNN was tried for a maximum of 3 layers
+4. Screenshot of the final training accuracy
+5. model.yaml file for the structure of the model
+6. model_weights.h5 file for the optimised weights
 
 ## Usage
 
@@ -34,14 +37,24 @@ import tensorflow as tf
 import tensorflow as keras
 new_model = tf.keras.models.load_model('final_model.h5')
 
-In order to see the model architecture, the following code can be used
+###In order to see the model architecture, the following code can be used
 
 model.summary()
 
-Then to evaluate the above model,
+###Then to evaluate the above model,
 
 loss, acc = new_model.evaluate(test_images, test_labels, verbose=2)
 print(loss, acc)
+
+OR
+
+###To load the .yaml and model_weights.h5 files separately,
+
+yaml_file = open('model.yaml', 'r')
+loaded_model_yaml = yaml_file.read()
+yaml_file.close()
+loaded_model = model_from_yaml(loaded_model_yaml)
+loaded_model.load_weights("model_weights.h5")
 
 2. In order to check model accuracies for models other than the finally selected model (i.e. for model with a differing number of maximum layers), the .ipynb file must be downloaded and uploaded to use with Jupyter notebooks, google colab, etc.
 
