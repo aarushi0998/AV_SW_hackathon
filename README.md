@@ -24,6 +24,7 @@ The CNN model giving me the most accuracy was finally used and trained again, fr
 The files available for download from the github repo are:
 1. The .ipynb code file used for execution of all the above
 2. The finally selected model .h5 file
+3. Screenshots of the plots of accuracy and loss of the ANN and CNN models. ANN was tried for a maximum of 2 layers (i.e. 1, 2 layers) and CNN was tried for a maximum of 3 layers
 
 ## Usage
 
