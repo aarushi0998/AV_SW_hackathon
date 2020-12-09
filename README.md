@@ -39,7 +39,11 @@ new_model = tf.keras.models.load_model('final_model.h5')
 
 ###In order to see the model architecture, the following code can be used
 
-model.summary()
+new_model.summary()
+
+###To view the model weights
+
+new_model.get_weights()
 
 ###Then to evaluate the above model,
 
